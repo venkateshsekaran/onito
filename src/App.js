@@ -59,9 +59,11 @@ function App() {
         </FormDiv>
       </AppLayout>
       {/* Table */}
-      <TableDiv>
-        <BasicTable tableData={tableData} />
-      </TableDiv>
+      {tableData.length !== 0 && (
+        <TableDiv>
+          <BasicTable tableData={tableData} />
+        </TableDiv>
+      )}
     </MainAppContainer>
   );
 }
